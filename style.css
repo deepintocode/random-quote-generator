@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-color: #2d3047;
+}
+
+main {
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+#bg-image {
+  position: absolute;
+  background-image: url("https://images.pexels.com/photos/362/marketing-man-person-communication.jpg?cs=srgb&dl=can-chat-chatting-362.jpg&fm=jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  margin: 200px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 50px 150 50px;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 10px;
+}
+
+a {
+  padding: 5px 0;
+}
+
+
+#quote, #author {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#quote {
+  color: var(--text-color);
+  min-height: 200px;
+}
+
+#author {
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.twitter-share-button {
+  color: var(--text-color);
+  transition: background 0.5s;
+}
+
+.twitter-share-button:visited {
+  color: var(--text-color);
+}
+
+.twitter-share-button:hover {
+  background: var(--text-color);
+  color: white;
+  transition: background 0.5s;
+}
+
+#button {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  transition: background 0.5s;
+}
+
+#button:hover {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  background: var(--text-color);
+  color: white;
+  transition: background 0.5s;
+}
+
+a:active {
+  border: 2px solid #ffd700;
+}
+@media (max-width: 968px) {
+  main {
+    width: 80vw;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+  }
+
+  .container {
+    display: grid;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px 150 50px;
+  }
+}
+
+@media (max-width: 568px) {
+  main {
+    width: 80vw;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: grid;
+    margin: 70px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px 150 50px;
+  }
+
+  #quote {
+    color: var(--text-color);
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    width: 80vw;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+  }
+
+  .container {
+    display: grid;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px 150 50px;
+  }
+
+  #quote {
+    color: var(--text-color);
+    min-height: 100px;
+  }
+}
